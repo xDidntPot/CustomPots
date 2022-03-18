@@ -43,7 +43,8 @@ class EventListener implements Listener
                 $location->getPitch()
             ),
             $player,
-            PotionTypeIdMap::getInstance()->fromId(PotionTypeIds::STRONG_HEALING));
+            PotionTypeIdMap::getInstance()->fromId(PotionTypeIds::STRONG_HEALING)
+        );
 
         $ev = new ProjectileLaunchEvent($pot);
         $ev->call();
